@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Date Ideas
 
-## Getting Started
+**Date Ideas** é um aplicativo criado com **Next.js** e **TypeScript** que ajuda casais a explorar temas e perguntas para fortalecer sua conexão. Com uma interface simples e interativa, o aplicativo oferece duas opções principais: escolher um tema ou gerar uma pergunta aleatória, proporcionando momentos de diálogo e diversão.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Página Inicial
+- **Botão "Escolha um Tema"**: Lista todos os temas disponíveis para o usuário escolher.
+- **Botão "Date Aleatório"**: Gera aleatoriamente uma pergunta de qualquer tema disponível.
+- **Fundo Dinâmico**: A cor de fundo muda com base no tema selecionado.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Temas
+Os temas disponíveis incluem:
+- Sobre você e sobre mim
+- Metas, sonhos e futuro
+- Sexo e intimidade
+- Trabalho e dinheiro
+- Comunicação e solução de conflitos
+- Tempo de qualidade, limites e compatibilidade
+- Saúde e estilo de vida
+- Respeito e compromisso
+- Date surpresa
+- Nossa história
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Cada tema possui uma cor associada e uma lista de perguntas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tecnologias Utilizadas
+- **Next.js**: Framework React para renderização do lado do servidor.
+- **TypeScript**: Superset do JavaScript para adicionar tipagem estática ao código.
+- **CSS Modules**: Para estilização modular e reutilizável.
 
-## Learn More
+## Como Executar o Projeto
 
-To learn more about Next.js, take a look at the following resources:
+### Pré-requisitos
+- Node.js instalado na máquina.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Passos
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   ```
+2. Navegue até a pasta do projeto:
+   ```bash
+   cd date-ideas
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+5. Abra o navegador e acesse:
+   ```
+   http://localhost:3000
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estrutura do Projeto
 
-## Deploy on Vercel
+- **`pages/index.tsx`**: Componente principal do aplicativo, contendo a lógica para exibir temas, perguntas e alterar o fundo dinamicamente.
+- **`styles/Home.module.css`**: Arquivo de estilização para os componentes.
+- **`types.ts`** (opcional): Define os tipos utilizados no projeto, como `Theme` e `Themes`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Melhorias Futuras
+- Adicionar mais temas e perguntas.
+- Implementar suporte a múltiplos idiomas.
+- Salvar o progresso ou histórico dos temas explorados.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribuição
+Sinta-se à vontade para contribuir com o projeto! Faça um fork, implemente suas alterações e abra um pull request.
+
+## Licença
+Este projeto está licenciado sob a MIT License.
+
