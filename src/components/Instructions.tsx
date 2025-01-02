@@ -19,7 +19,7 @@ import { Separator } from "@/components/ui/separator";
 
 const Instructions = () => {
   return (
-    <div className="uppercase text-white mx-auto font-bold text-xl my-10">
+    <div className="flex">
       <Dialog>
         <DialogTrigger className="uppercase text-white mx-auto font-bold text-xl my-10">
           instruções
