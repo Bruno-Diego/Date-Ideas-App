@@ -1,7 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { themes } from "@/lib/db";
+import Link from "next/link";
+import { BsHouseFill } from "react-icons/bs";
 
 const Dates = () => {
   const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
@@ -36,6 +38,11 @@ const Dates = () => {
       className="flex flex-col items-center justify-center min-h-screen"
       style={{ backgroundColor }}
     >
+      <div id="home-button" className="text-white">
+        <Link href={"/"} className="flex items-center">
+          <BsHouseFill className="w-7 h-7" />
+        </Link>
+      </div>
       <h1 className="text-white text-2xl font-bold mb-6">Date Ideas</h1>
 
       {!selectedTheme && (
@@ -78,7 +85,10 @@ const Dates = () => {
           <p className="text-white text-lg mb-6">{currentQuestion}</p>
           <Button
             variant="outline"
-            onClick={() => setSelectedTheme(null)}
+            onClick={() => (
+                setSelectedTheme(null),
+                setBackgroundColor("#C32228")
+            )}
             className="w-full max-w-md text-lg"
           >
             Voltar
