@@ -1,4 +1,7 @@
 'use client'
+import Instructions from '@/components/Instructions';
+import StartButton from '@/components/StartButton';
+import Title from '@/components/Title';
 // pages/index.tsx
 import { useState } from 'react';
 // import styles from '../styles/Home.module.css';
@@ -183,7 +186,10 @@ export default function Home() {
     };
 
     return (
-        <div className="{styles.container}" style={{ backgroundColor }}>
+        <div className="{styles.container} h-full content-center text-center" style={{ backgroundColor }}>
+            <Title />
+            <StartButton />
+            <Instructions />
             <h1 className="{styles.title}">Date Ideas</h1>
             <br />
 

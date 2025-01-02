@@ -1,6 +1,6 @@
-# Date Ideas
+# 10 Dates para se conectar
 
-**Date Ideas** é um aplicativo criado com **Next.js** e **TypeScript** que ajuda casais a explorar temas e perguntas para fortalecer sua conexão. Com uma interface simples e interativa, o aplicativo oferece duas opções principais: escolher um tema ou gerar uma pergunta aleatória, proporcionando momentos de diálogo e diversão.
+**10 Dates para se conectar** é um aplicativo criado com **Next.js** e **TypeScript** que ajuda casais a explorar temas e perguntas para fortalecer sua conexão. Com uma interface simples e interativa, o aplicativo oferece duas opções principais: escolher um tema ou gerar uma pergunta aleatória, proporcionando momentos de diálogo e diversão.
 
 ## Funcionalidades
 
