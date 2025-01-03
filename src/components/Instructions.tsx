@@ -36,7 +36,7 @@ const Instructions = () => {
                   <Separator />
                   <DialogDescription>
                     Este não é apenas um jogo, mas uma jornada de descoberta.
-                    Cada carta que vocês seguram nas mãos é uma oportunidade
+                    Cada &quot;DATE&quot; que vocês sortearem é uma oportunidade
                     única para que vocês possam mergulhar mais fundo no que faz
                     o amor durar: <strong>a conexão entre pessoas.</strong>
                   </DialogDescription>
@@ -47,9 +47,10 @@ const Instructions = () => {
                   <DialogTitle>Como Jogar</DialogTitle>
                   <Separator />
                   <DialogDescription>
-                    <strong>Escolham um tema para o encontro.</strong> Podem
+                    <strong>Escolham um tema para o encontro.</strong> 
+                    Clique em &quot;Começar&quot; e escolha uma opção. Podem
                     selecionar um tema que precise de atenção ou deixar na mão
-                    do destino: escolhendo uma carta de cada cor.
+                    do destino clicando em &quot;Date Aleatório&quot;.
                   </DialogDescription>
                 </DialogHeader>
               </CarouselItem>
@@ -70,7 +71,7 @@ const Instructions = () => {
                   <Separator />
                   <DialogDescription>
                     <strong>
-                      Com as cartas em mãos, deixem que as palavras guiem o
+                      Quando sortearem o date, deixem que as palavras guiem o
                       diálogo.
                     </strong>
                     Uma pessoa pode ler a pergunta em voz alta e, então, ambos
@@ -89,7 +90,7 @@ const Instructions = () => {
                     <strong>
                       No final do date, compartilhem abertamente como se
                       sentiram.
-                    </strong>{" "}
+                    </strong>
                     O que descobriram um sobre o outro? Como se sentem agora?
                     Aproveitem essa oportunidade para se reconhecerem e se
                     amarem. Esse jogo é o começo de uma partida que não termina
