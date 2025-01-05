@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "10 Dates para se conectar",
   description: "10 Dates para se conectar é um aplicativo criado com Next.js e TypeScript que ajuda casais a explorar temas e perguntas para fortalecer sua conexão.",
+  authors: [{ name: "Bruno Diego da Silva" }],
 };
 
 export default function RootLayout({
@@ -28,6 +30,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen`}
       >
         {children}
+        <Script
+          id="google-adsense"
+          type="text/javascript"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1391817810231795"
+        />
       </body>
     </html>
   );
