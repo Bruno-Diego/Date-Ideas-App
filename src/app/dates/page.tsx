@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { themes } from "@/lib/db";
 import Link from "next/link";
 import { BsHouseFill } from "react-icons/bs";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const Dates = () => {
+  const { language } = useLanguage(); // Get current language
   const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState<string | null>(null);
   const [backgroundColor, setBackgroundColor] = useState<string>("#C32228");
@@ -16,7 +18,7 @@ const Dates = () => {
       themesArray[Math.floor(Math.random() * themesArray.length)];
     const questions = themes[randomTheme].questions;
     const randomQuestion =
-      questions[Math.floor(Math.random() * questions.length)];
+      questions[Math.floor(Math.random() * questions.length)][language as keyof typeof questions[0]]; // Get question in selected language
 
     setSelectedTheme(randomTheme);
     setCurrentQuestion(randomQuestion);
@@ -26,7 +28,7 @@ const Dates = () => {
   const handleChooseTheme = (theme: string): void => {
     const questions = themes[theme].questions;
     const randomQuestion =
-      questions[Math.floor(Math.random() * questions.length)];
+      questions[Math.floor(Math.random() * questions.length)][language as keyof typeof questions[0]]; // Get question in selected language
 
     setSelectedTheme(theme);
     setCurrentQuestion(randomQuestion);
@@ -35,7 +37,7 @@ const Dates = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center my-20"
+      className="flex flex-col items-center justify-center min-h-screen"
       style={{ backgroundColor }}
     >
       <div id="home-button" className="text-white">
@@ -43,7 +45,13 @@ const Dates = () => {
           <BsHouseFill className="w-7 h-7" />
         </Link>
       </div>
-      <h1 className="text-white text-2xl font-bold mb-6">Date Ideas</h1>
+
+      <h1 className="text-white text-2xl font-bold mb-6">
+        {language === "pt" ? "Ideias para Encontros" : 
+         language === "en" ? "Date Ideas" : 
+         language === "es" ? "Ideas para Citas" : 
+         "Idées de Rendez-vous"}
+      </h1>
 
       {!selectedTheme && (
         <div className="space-y-4">
@@ -52,14 +60,20 @@ const Dates = () => {
             onClick={handleRandomDate}
             className="w-full max-w-md text-lg"
           >
-            Date Aleatório
+            {language === "pt" ? "Date Aleatório" : 
+             language === "en" ? "Random Date" : 
+             language === "es" ? "Cita Aleatoria" : 
+             "Rendez-vous Aléatoire"}
           </Button>
           <Button
             variant="outline"
             onClick={() => setSelectedTheme("choose")}
             className="w-full max-w-md text-lg"
           >
-            Escolha um Tema
+            {language === "pt" ? "Escolha um Tema" : 
+             language === "en" ? "Choose a Theme" : 
+             language === "es" ? "Elige un Tema" : 
+             "Choisissez un Thème"}
           </Button>
         </div>
       )}
@@ -80,18 +94,21 @@ const Dates = () => {
       )}
 
       {selectedTheme && selectedTheme !== "choose" && (
-        <div className="text-center mt-6 ">
+        <div className="text-center mt-6">
           <h2 className="text-white text-xl font-bold mb-4">{selectedTheme}</h2>
           <p className="text-white text-lg mb-6">{currentQuestion}</p>
           <Button
             variant="outline"
-            onClick={() => (
-                setSelectedTheme(null),
-                setBackgroundColor("#C32228")
-            )}
+            onClick={() => {
+              setSelectedTheme(null);
+              setBackgroundColor("#C32228");
+            }}
             className="w-full max-w-md text-lg"
           >
-            Voltar
+            {language === "pt" ? "Voltar" : 
+             language === "en" ? "Back" : 
+             language === "es" ? "Regresar" : 
+             "Retour"}
           </Button>
         </div>
       )}
