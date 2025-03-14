@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+testopenapi.ts
+textcortexconntest.ts
 
 # next.js
 /.next/

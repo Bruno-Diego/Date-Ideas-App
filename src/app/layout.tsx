@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
+import { LanguageProvider } from "@/lib/LanguageContext";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,9 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen bg-[#C32228]`}
       >
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
         <Script
           id="google-adsense"
           type="text/javascript"

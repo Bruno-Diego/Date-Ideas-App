@@ -35,7 +35,7 @@ const Dates = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen"
+      className="flex flex-col items-center justify-center my-20"
       style={{ backgroundColor }}
     >
       <div id="home-button" className="text-white">
@@ -80,7 +80,7 @@ const Dates = () => {
       )}
 
       {selectedTheme && selectedTheme !== "choose" && (
-        <div className="text-center mt-6">
+        <div className="text-center mt-6 ">
           <h2 className="text-white text-xl font-bold mb-4">{selectedTheme}</h2>
           <p className="text-white text-lg mb-6">{currentQuestion}</p>
           <Button
