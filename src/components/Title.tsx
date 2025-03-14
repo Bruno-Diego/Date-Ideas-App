@@ -20,7 +20,7 @@ const Title = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_TEXTCORTEX_API_KEY}`,
+          Authorization: `Bearer ${process.env.NEXT_TEXTCORTEX_API_KEY}`,
         },
         body: JSON.stringify({
           formality: "default",

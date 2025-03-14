@@ -29,8 +29,8 @@ export async function middleware(req: NextRequest) {
   // Obter a URL e o idioma selecionado
   const { nextUrl } = req;
   const targetLang = nextUrl.searchParams.get("language") || "pt"; // Default: pt
-  const textCortexUrl = process.env.NEXT_PUBLIC_TEXTCORTEX_URL || "";
-  const apiKey = process.env.NEXT_PUBLIC_TEXTCORTEX_API_KEY || "";
+  const textCortexUrl = process.env.NEXT_TEXTCORTEX_URL || "";
+  const apiKey = process.env.NEXT_TEXTCORTEX_API_KEY || "";
   console.log("textCortexUrl: ")
   console.log(textCortexUrl)
   console.log("************************************************************")
